@@ -1,0 +1,1 @@
+"""Publication state persistence package."""

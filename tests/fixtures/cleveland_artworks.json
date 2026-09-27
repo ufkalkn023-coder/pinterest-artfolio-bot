@@ -1,0 +1,133 @@
+{
+  "data": [
+    {
+      "accession_number": "1915.534",
+      "creation_date": "c. 1765",
+      "creation_date_earliest": 1760,
+      "creation_date_latest": 1770,
+      "creators": [
+        {
+          "biography": null,
+          "birth_year": "1738",
+          "death_year": "1815",
+          "description": "John Singleton Copley (American, born The Thirteen Colonies, 1738\u20131815)",
+          "extent": null,
+          "id": 2409,
+          "include_extent": false,
+          "name_in_original_language": null,
+          "qualifier": null,
+          "role": "artist",
+          "use_in_caption": true,
+          "weight": 1
+        }
+      ],
+      "creditline": "Gift of the John Huntington Art and Polytechnic Trust",
+      "culture": [
+        "America"
+      ],
+      "department": "American Painting and Sculpture",
+      "description": "Hurd was a prominent silversmith and engraver in Boston, and the warm gaze and unforced smile in his portrait by Copley suggest the friendship between the two artists. Hurd's open-collared shirt, as well as the rakishly tilted turban that covers his shaved head in place of a ceremonial powdered wig, create an air of informality that is unusual for a portrait of this time.",
+      "id": 94979,
+      "images": {
+        "annotation": "",
+        "full": {
+          "filename": "1915.534_full.tif",
+          "filesize": "76080612",
+          "height": "5500",
+          "url": "https://openaccess-cdn.clevelandart.org/1915.534/1915.534_full.tif",
+          "width": "4609"
+        },
+        "print": {
+          "filename": "1915.534_print.jpg",
+          "filesize": "5904910",
+          "height": "3400",
+          "url": "https://openaccess-cdn.clevelandart.org/1915.534/1915.534_print.jpg",
+          "width": "2849"
+        },
+        "web": {
+          "filename": "1915.534_web.jpg",
+          "filesize": "402404",
+          "height": "893",
+          "url": "https://openaccess-cdn.clevelandart.org/1915.534/1915.534_web.jpg",
+          "width": "748"
+        }
+      },
+      "share_license_status": "CC0",
+      "technique": "oil on canvas",
+      "title": "Nathaniel Hurd",
+      "type": "Painting",
+      "unknownFutureField": {
+        "nested": "value"
+      },
+      "url": "https://clevelandart.org/art/1915.534"
+    },
+    {
+      "accession_number": "1927.1984",
+      "creation_date": "1873",
+      "creation_date_earliest": 1873,
+      "creation_date_latest": 1873,
+      "creators": [
+        {
+          "biography": null,
+          "birth_year": "1844",
+          "death_year": "1916",
+          "description": "Thomas Eakins (American, 1844\u20131916)",
+          "extent": null,
+          "id": 4037,
+          "include_extent": false,
+          "name_in_original_language": null,
+          "qualifier": null,
+          "role": "artist",
+          "use_in_caption": true,
+          "weight": 1
+        }
+      ],
+      "creditline": "Hinman B. Hurlbut Collection",
+      "culture": [
+        "America"
+      ],
+      "department": "American Painting and Sculpture",
+      "description": "Eakins's painting celebrates athletic teamwork while commemorating an actual event, a famous rowing race that took place on the Schuylkill River in Philadelphia during May 1872. Throngs of spectators line the riverbank and watch as Barney and John Biglin negotiate the tricky turn around a stake marking the halfway point in the contest. Their competitors, seen in the middle distance at the right, lag behind. The Biglin brothers won the race, cementing their status as the most celebrated oarsmen of the era. Trained in the United States and France, Eakins spent almost his entire artistic career in his hometown of Philadelphia. He is renowned for the unsentimental realism in his paintings, whose compositions he developed through painstakingly prepared figure and perspective drawings.",
+      "id": 151904,
+      "images": {
+        "annotation": "",
+        "full": {
+          "filename": "1927.1984_full.tif",
+          "filesize": "101799424",
+          "height": "4735",
+          "url": "https://openaccess-cdn.clevelandart.org/1927.1984/1927.1984_full.tif",
+          "width": "7164"
+        },
+        "print": {
+          "filename": "1927.1984_print.jpg",
+          "filesize": "5271592",
+          "height": "2247",
+          "url": "https://openaccess-cdn.clevelandart.org/1927.1984/1927.1984_print.jpg",
+          "width": "3400"
+        },
+        "web": {
+          "filename": "1927.1984_web.jpg",
+          "filesize": "780656",
+          "height": "835",
+          "url": "https://openaccess-cdn.clevelandart.org/1927.1984/1927.1984_web.jpg",
+          "width": "1263"
+        }
+      },
+      "share_license_status": "CC0",
+      "technique": "oil on canvas",
+      "title": "The Biglin Brothers Turning the Stake",
+      "type": "Painting",
+      "url": "https://clevelandart.org/art/1927.1984"
+    }
+  ],
+  "info": {
+    "parameters": {
+      "cc0": "1",
+      "has_image": "1",
+      "limit": 2,
+      "select": "accession_number,accession_number_sortable,cover_accession_number,department,department,classification_type,gallery,collection",
+      "skip": 0
+    },
+    "total": 41581
+  }
+}

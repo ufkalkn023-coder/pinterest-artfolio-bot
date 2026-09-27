@@ -1,0 +1,1 @@
+"""Rijksmuseum adapter package."""

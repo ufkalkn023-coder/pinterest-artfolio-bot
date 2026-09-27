@@ -1,0 +1,53 @@
+# Pinterest Art Bot — Pin text templates
+#
+# Pinterest discovers pins through their text, so the copy is configuration
+# rather than code. Templates are plain strings with {placeholders}; unknown
+# placeholders are dropped rather than raising.
+#
+# Placeholders available:
+#   {title} {artist} {artist_display} {year} {date} {medium} {movement}
+#   {movement_display} {collection} {department} {culture} {board} {source}
+#
+# Priority: a board-specific template wins, then a movement template, then the
+# default. Missing templates fall back to the built-in copy.
+
+default:
+  title: "{title} — {artist_display}"
+  description: |
+    {artist_display} · {movement_display}
+    {date}{medium_line}
+    From the collection of {collection}.
+
+    More {movement_display} art on this board.
+
+boards:
+  impressionism:
+    title: "{title} by {artist_display} — Impressionist Art"
+    description: |
+      A {movement_display} work: {title} by {artist_display}, {date}.
+      {medium_line}Now in the {collection}.
+
+      Explore more {movement_display} paintings on this board.
+  baroque:
+    title: "{title} — Baroque Masterpiece"
+    description: |
+      {artist_display}, {date}. {medium_line}
+      A {movement_display} work from the {collection}.
+
+      More {movement_display} art on this board.
+movements:
+  post_impressionism:
+    description: |
+      {artist_display}, {date}. {medium_line}
+      {movement_display} art from the {collection}.
+
+      See more {movement_display} works on this board.
+# Extra keywords appended to every description, from configuration.
+# Set PIN_EXTRA_KEYWORDS in the environment to override.
+keywords:
+  - art
+  - arthistory
+  - painting
+  - museum
+  - arttrip
+  - classicalart

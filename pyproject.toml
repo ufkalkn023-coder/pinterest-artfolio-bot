@@ -1,0 +1,91 @@
+[project]
+name = "pinterest-art-bot"
+version = "0.1.0"
+description = "Automated Pinterest art publishing system — museum ingestion, artwork intelligence, curation, and Pinterest publishing."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.27,<1",
+    "pydantic>=2.7,<3",
+    "pydantic-settings>=2.3,<3",
+    "pyyaml>=6.0,<7",
+    "structlog>=24.1,<26",
+    "pillow>=10.3,<12",
+]
+
+[project.optional-dependencies]
+dev = [
+    "hypothesis>=6.100,<7",
+    "pytest>=8.2,<9",
+    "pytest-asyncio>=0.23,<1",
+    "pytest-cov>=5.0,<6",
+    "ruff>=0.5,<1",
+    "mypy>=1.10,<2",
+    "types-PyYAML>=6.0,<7",
+    "types-Pillow>=10.2,<12",
+]
+
+[project.scripts]
+pinterest-art-bot = "pinterest_art_bot.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pinterest_art_bot"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "-m 'not live'"
+markers = [
+    "unit: fast isolated unit tests",
+    "integration: tests requiring external resources or state",
+    "live: opt-in live network tests against public APIs (deselected by default)",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["pinterest_art_bot"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+# AGENTS.md invariant: rights, deduplication, and publication paths must stay covered.
+exclude_also = [
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]
+
+[tool.ruff]
+target-version = "py312"
+src = ["src", "tests"]
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "N",    # pep8-naming
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "SIM",  # flake8-simplify
+    "RUF",  # ruff-specific
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["pinterest_art_bot"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+mypy_path = "src"
+packages = ["pinterest_art_bot"]

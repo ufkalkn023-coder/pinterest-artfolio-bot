@@ -1,0 +1,57 @@
+{
+  "config": {
+    "iiif_url": "https://www.artic.edu/iiif/2",
+    "website_url": "http://www.artic.edu"
+  },
+  "data": [
+    {
+      "artist_display": "Vincent van Gogh (Dutch, 1853\u20131890)",
+      "credit_line": "Helen Birch Bartlett Memorial Collection",
+      "date_display": "1889",
+      "id": 28560,
+      "image_id": "6644829f-f292-c5c4-a73c-0356a6fdbf0d",
+      "is_public_domain": true,
+      "style_titles": [
+        "Post-Impressionism",
+        "19th century",
+        "nineteenth century"
+      ],
+      "thumbnail": {
+        "alt_text": "Painting of bedroom, blue walls, green window, tan bed, red bedding.",
+        "height": 9875,
+        "lqip": "data:image/gif;base64,R0lGODlhBgAFAPQAAHp3ZJttAJdwL5Z6MYt4Sod7V3uDdXmIc3qCe4uATIeCUoWDY4eGZZmOapiObICGdoeEdYqGe42EeIqNeZGOeXyFkHmIoIOIiJSMgZWMgouQhIeNmoCQpZSeqAAAAAAAACH5BAAAAAAAIf8LSW1hZ2VNYWdpY2sOZ2FtbWE9MC40NTQ1NDUALAAAAAAGAAUAAAUYoHUYW8dVyOM01wIwQkAolJYMBYRhUySFADs=",
+        "width": 12614
+      },
+      "title": "The Bedroom",
+      "unknownFutureField": {
+        "nested": "value"
+      }
+    },
+    {
+      "artist_display": "India\nNagapattinam, Tamil Nadu",
+      "credit_line": "Purchased with funds provided by Mr. and Mrs. Robert Andrew Brown",
+      "date_display": "Chola period, about 12th century",
+      "id": 21023,
+      "image_id": "0675f9a9-1a7b-c90a-3bb6-7f7be2afb678",
+      "is_public_domain": true,
+      "style_titles": [
+        "South Asian",
+        "chola"
+      ],
+      "thumbnail": {
+        "alt_text": "Dark stone sculpture of Buddha sitting cross-legged, hands in lap, eyes closed.",
+        "height": 6356,
+        "lqip": "data:image/gif;base64,R0lGODlhBAAFAPQAAFdNQ1xSR1BQUVhXVVpYVllaWllaW25jWWljXXFnXWNiYWVjYWxmYGhoaIN6coR8dIiEgYmFggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAAEAAUAAAURoEAMQoEwRnMkjQIEC/Q4UQgAOw==",
+        "width": 5085
+      },
+      "title": "Buddha Shakyamuni Seated in Meditation (Dhyanamudra)"
+    }
+  ],
+  "pagination": {
+    "current_page": 1,
+    "limit": 2,
+    "offset": 0,
+    "total": 62072,
+    "total_pages": 31036
+  }
+}

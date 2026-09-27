@@ -1,0 +1,147 @@
+# Pinterest Art Bot — Board Configuration
+#
+# Maps art movements to Pinterest boards.
+# board_id values are null until boards are created on Pinterest.
+# Do NOT hardcode board_id values in Python code.
+
+boards:
+
+  ancient:
+    board_name: "Ancient Art"
+    board_id: null
+    description: "Art from ancient civilizations"
+    movements:
+      - ancient
+
+  medieval:
+    board_name: "Medieval Art"
+    board_id: null
+    description: "Medieval, Gothic, and Byzantine art"
+    movements:
+      - medieval
+      - gothic
+      - byzantine
+
+  renaissance:
+    board_name: "Renaissance Art"
+    board_id: null
+    description: "Early, High, and Northern Renaissance art"
+    movements:
+      - early_renaissance
+      - renaissance
+      - high_renaissance
+      - northern_renaissance
+      - mannerism
+
+  baroque:
+    board_name: "Baroque Art"
+    board_id: null
+    description: "Baroque art and architecture"
+    movements:
+      - baroque
+
+  rococo:
+    board_name: "Rococo Art"
+    board_id: null
+    movements:
+      - rococo
+
+  neoclassicism:
+    board_name: "Neoclassicism"
+    board_id: null
+    movements:
+      - neoclassicism
+
+  romanticism:
+    board_name: "Romanticism"
+    board_id: null
+    movements:
+      - romanticism
+
+  realism:
+    board_name: "Realism"
+    board_id: null
+    movements:
+      - realism
+
+  impressionism:
+    board_name: "Impressionism"
+    board_id: null
+    description: "Impressionist and Neo-Impressionist art"
+    movements:
+      - impressionism
+      - neo_impressionism
+
+  post_impressionism:
+    board_name: "Post-Impressionism"
+    board_id: null
+    movements:
+      - post_impressionism
+
+  art_nouveau:
+    board_name: "Art Nouveau"
+    board_id: null
+    movements:
+      - art_nouveau
+      - arts_and_crafts
+
+  symbolism:
+    board_name: "Symbolism"
+    board_id: null
+    movements:
+      - symbolism
+
+  expressionism:
+    board_name: "Expressionism"
+    board_id: null
+    movements:
+      - expressionism
+      - fauvism
+
+  cubism:
+    board_name: "Cubism"
+    board_id: null
+    description: "Cubism, Futurism, and Constructivism"
+    movements:
+      - cubism
+      - futurism
+      - constructivism
+
+  dada_surrealism:
+    board_name: "Surrealism"
+    board_id: null
+    movements:
+      - dada
+      - surrealism
+
+  abstract_expressionism:
+    board_name: "Abstract Expressionism"
+    board_id: null
+    movements:
+      - abstract_expressionism
+
+  pop_art:
+    board_name: "Pop Art"
+    board_id: null
+    movements:
+      - pop_art
+      - op_art
+
+  minimalism:
+    board_name: "Minimalism"
+    board_id: null
+    movements:
+      - minimalism
+
+  modern:
+    board_name: "Modern Art"
+    board_id: null
+    movements:
+      - modernism
+      - art_deco
+
+  contemporary:
+    board_name: "Contemporary Art"
+    board_id: null
+    movements:
+      - contemporary

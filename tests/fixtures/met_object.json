@@ -1,0 +1,44 @@
+{
+  "additionalImages": [
+    "https://images.metmuseum.org/CRDImages/ep/original/LC-EP_1993_132_suppl_CH-004.jpg",
+    "https://images.metmuseum.org/CRDImages/ep/original/LC-EP_1993_132_suppl_CH-003.jpg",
+    "https://images.metmuseum.org/CRDImages/ep/original/LC-EP_1993_132_suppl_CH-002.jpg",
+    "https://images.metmuseum.org/CRDImages/ep/original/LC-EP_1993_132_suppl_CH-001.jpg"
+  ],
+  "artistDisplayName": "Vincent van Gogh",
+  "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500115588",
+  "classification": "Paintings",
+  "creditLine": "Purchase, The Annenberg Foundation Gift, 1993",
+  "culture": "",
+  "department": "European Paintings",
+  "isPublicDomain": true,
+  "medium": "Oil on canvas",
+  "objectBeginDate": 1889,
+  "objectDate": "1889",
+  "objectEndDate": 1889,
+  "objectID": 436535,
+  "objectName": "Painting",
+  "objectURL": "https://www.metmuseum.org/art/collection/search/436535",
+  "period": "",
+  "primaryImage": "https://images.metmuseum.org/CRDImages/ep/original/DP-42549-001.jpg",
+  "primaryImageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-42549-001.jpg",
+  "rightsAndReproduction": "",
+  "tags": [
+    {
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300132294",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q191163",
+      "term": "Landscapes"
+    },
+    {
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300343641",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q146911",
+      "term": "Cypresses"
+    },
+    {
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300133099",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q1313",
+      "term": "Summer"
+    }
+  ],
+  "title": "Wheat Field with Cypresses"
+}

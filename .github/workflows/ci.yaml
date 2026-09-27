@@ -1,0 +1,141 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+
+      - name: Install dependencies
+        run: |
+          uv venv
+          uv pip install -e ".[dev]"
+
+      - name: Ruff check
+        run: uv run ruff check .
+
+      - name: Ruff format check
+        run: uv run ruff format --check .
+
+      - name: Type check
+        run: uv run mypy
+
+      - name: Run tests
+        run: uv run pytest -v --tb=short
+
+      - name: Verify contract fixtures are current
+        run: uv run pytest tests/test_contracts.py -q
+
+  coverage-gate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+
+      - name: Install dependencies
+        run: |
+          uv venv
+          uv pip install -e ".[dev]"
+
+      - name: Coverage gate
+        run: |
+          uv run pytest -q \
+            --cov=pinterest_art_bot \
+            --cov-report=term-missing \
+            --cov-report=xml \
+            --cov-fail-under=85
+
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-${{ github.sha }}
+          path: coverage.xml
+          if-no-files-found: warn
+
+  self-check:
+    # Proves the safety switches cannot be turned on by accident.
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+
+      - name: Install dependencies
+        run: |
+          uv venv
+          uv pip install -e ".[dev]"
+
+      - name: Status reports every production switch as OFF
+        run: |
+          uv run pinterest-art-bot status --json > status.json
+          uv run python - <<'PY'
+          import json
+          payload = json.load(open("status.json"))
+          switches = payload["safety_switches"]
+          assert switches["publish_to_pinterest"] is False, switches
+          assert switches["pinterest_auto_create_boards"] is False, switches
+          assert switches["pinterest_production_schedule_enabled"] is False, switches
+          assert switches["rights_enforce_strict"] is True, switches
+          assert payload["capabilities"]["can_publish"] is False, payload["capabilities"]
+          print("safety defaults verified")
+          PY
+
+  live-museum-reads:
+    # Opt-in: verifies the real museum APIs still answer. Read-only GET requests.
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+
+      - name: Install dependencies
+        run: |
+          uv venv
+          uv pip install -e ".[dev]"
+
+      - name: Live museum API smoke tests
+        run: uv run pytest -m live -v --tb=short
